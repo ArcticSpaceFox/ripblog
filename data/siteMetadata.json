@@ -1,0 +1,15 @@
+{
+  "title": "RIP",
+  "author": "ArcticSpaceFox",
+  "headerTitle": "Rostocker In Pyjamas",
+  "description": "This is a start of our new venture as server hosters",
+  "language": "en-us",
+  "siteUrl": "https://ripsquad.de",
+  "siteRepo": "https://github.com/ArcticSpaceFox/ripblog",
+  "discordJoinURL": "https://discord.gg/qnDRqBt6ND",
+  "image": "/static/images/avatar.png",
+  "socialBanner": "/static/images/twitter-card.png",
+  "email": "noreply@ripsquad.de",
+  "github": "https://github.com/ArcticSpaceFox",
+  "locale": "en-US"
+}
