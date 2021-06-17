@@ -90,10 +90,13 @@ export default function Projects() {
           )}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col w-full p-10 px-8 pt-6 mx-auto my-6 mb-4 transition duration-300 ease-in-out transform bg-white border rounded-lg lg:w-1/2 "
+            className="flex flex-col w-full p-10 px-8 pt-6 mx-auto my-6 mb-4 transition duration-300 ease-in-out transform bg-white dark:bg-gray-900 border rounded-lg lg:w-1/2 dark:border-gray-700"
           >
             <div className="relative pt-4" data-children-count="1">
-              <label htmlFor="email" className="text-base leading-7 text-gray-500">
+              <label
+                htmlFor="email"
+                className="text-base leading-7 text-gray-500 dark:text-gray-300"
+              >
                 Email
               </label>
               <input
@@ -101,14 +104,17 @@ export default function Projects() {
                 id="email"
                 name="email"
                 placeholder="your.email@mail.com"
-                className="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-300 ease-in-out transform rounded-lg bg-gray-50 border-gray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                className="w-full px-4 py-2 mt-2 mr-4 text-base text-black dark:text-gray-200 transition duration-300 ease-in-out transform rounded-lg bg-gray-50 dark:bg-gray-800 border-gray-100 dark:border-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                 data-kwimpalastatus="alive"
                 data-kwimpalaid="1623919072971-21"
                 {...register('email')}
               />
             </div>
             <div className="relative mt-4" data-children-count="1">
-              <label htmlFor="reason" className="text-base leading-7 text-gray-500">
+              <label
+                htmlFor="reason"
+                className="text-base leading-7 text-gray-500 dark:text-gray-300"
+              >
                 Reason <span className="text-red-400">*</span>
               </label>
               <input
@@ -116,7 +122,7 @@ export default function Projects() {
                 id="reason"
                 name="reason"
                 placeholder="Why are you reaching out to us?"
-                className="w-full px-4 py-2 mt-2 text-base text-black transition duration-300 ease-in-out transform rounded-lg bg-gray-50 border-gray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                className="w-full px-4 py-2 mt-2 text-base text-black dark:text-gray-200 transition duration-300 ease-in-out transform rounded-lg bg-gray-50 dark:bg-gray-800 border-gray-100 dark:border-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                 data-kwimpalastatus="alive"
                 data-kwimpalaid="1623919072971-22"
                 required={true}
@@ -130,12 +136,15 @@ export default function Projects() {
             </div>
             <div className="flex flex-wrap mt-4 mb-6 -mx-3">
               <div className="w-full px-3" data-children-count="1">
-                <label className="text-base leading-7 text-gray-500" htmlFor="description">
+                <label
+                  className="text-base leading-7 text-gray-500 dark:text-gray-300"
+                  htmlFor="description"
+                >
                   {' '}
                   Description <span className="text-red-400">*</span>
                 </label>
                 <textarea
-                  className="w-full h-32 px-4 py-2 mt-2 text-base transition duration-300 ease-in-out transform bg-gray-50 border rounded-lg border-gray-100 focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 apearance-none autoexpand"
+                  className="w-full h-32 px-4 py-2 mt-2 text-base transition duration-300 ease-in-out transform text-black dark:text-gray-200 bg-gray-50 dark:bg-gray-800 border rounded-lg border-gray-100 dark:border-gray-700 focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 apearance-none autoexpand"
                   id="description"
                   type="text"
                   name="description"
@@ -155,11 +164,11 @@ export default function Projects() {
               <button
                 type="submit"
                 className={
-                  'w-full py-3 text-base text-white transition duration-300 ease-in-out transform bg-blue-600 border-blue-600 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-800 ' +
+                  'w-full py-3 text-base text-white dark:text-gray-300 transition duration-300 ease-in-out transform bg-blue-600 border-blue-600 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-800 ' +
                   (!isDirty || !isValid
-                    ? 'bg-gray-100 border-gray-200 hover:bg-red-50 focus:ring-red-50 text-gray-300 cursor-not-allowed'
+                    ? 'bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:bg-red-50 focus:ring-red-50 text-gray-300 cursor-not-allowed'
                     : '') +
-                  (isSubmitting ? "bg-blue-500 animate-pulse duration-200" : "")
+                  (isSubmitting ? 'bg-blue-500 animate-pulse duration-200' : '')
                 }
               >
                 {' '}
