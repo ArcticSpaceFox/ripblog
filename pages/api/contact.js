@@ -21,9 +21,6 @@ export default async function handler(req, res) {
   let {email, reason, description} = req.body;
 
   // Validate form data
-  if (email && !validator.isEmail(email)) {
-    email = null
-  }
   email = validator.escape(email);
   reason = validator.escape(reason);
   description = validator.escape(description);
