@@ -21,11 +21,11 @@ export default async function handler(req, res) {
   let {email, reason, description} = req.body;
 
   // Validate form data
-  email = validator.escape(email);
+  if (!reason || !description) return res.status(400);
+  
+  if (email) email = validator.escape(email);
   reason = validator.escape(reason);
   description = validator.escape(description);
-
-  if (!reason || !description) return res.status(400);
 
   // Send to hooks
   await axios.post(process.env.DISCORD_HOOK, {
