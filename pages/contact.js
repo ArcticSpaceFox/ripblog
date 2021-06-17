@@ -35,7 +35,7 @@ export default function Projects() {
         </div>
 
         <div className="container items-center px-5 py-12 lg:px-20">
-          {!isSubmitSuccessful && (
+          {isSubmitSuccessful && (
             <div className="container items-center">
               <div className="w-full text-green-600 dark:text-green-500 overflow-hidden dark:bg-gray-800 border dark:border-gray-700 rounded-lg shadow-xl ">
                 <div className="flex items-center justify-between px-6 py-4 mx-auto ">
